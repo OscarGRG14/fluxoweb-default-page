@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluxo Web - Cloud</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; 
+    }
+
+    #particle-canvas {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Fondo de partículas */
+    }
+
+    #content {
+      position: relative;
+      z-index: 2; /* Contenido superpuesto */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  
+
+  <div id="content">
+    <div id="particle-canvas"></div>
+    <div>
+      <img src="https://i.postimg.cc/GtXpJQts/1679496068023.jpg" alt="FluxoWeb" class="mx-auto" style="max-width: 100%;">
+    </div>
+
+    <div class="mt-4 text-center">
+      <h1>Tu solución en la nube</h1>
+      <p>Experimenta la potencia de Fluxo Web Cloud para tus necesidades empresariales.</p>
+      <a href="https://www.tupaginadeservicio.com" class="btn btn-primary mt-3">Más información</a>
+    </div>
+
+  </div>
+
+  <script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
+
+  <script>
+    // Initialisation
+    var canvasDiv = document.getElementById('particle-canvas');
+    var options = {
+      particleColor: '#888',
+      background: '#1c1c1c',
+      interactive: true,
+      speed: 'medium',
+      density: 'high'
+    };
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
+  </script>
+
+</body>
+
+</html>
